@@ -36,7 +36,7 @@ async def main():
             if not filename:
                 filename = f"file_{message.id}"
 
-            filepath = os.path.join(download_dir, filename)
+            filepath = os.path.join(download_dir, f"{message.id}_{filename}")
             if os.path.exists(filepath):
                 print(f"Skipping (already exists): {filename}")
                 continue
